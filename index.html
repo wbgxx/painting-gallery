@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Painting Gallery</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <style>
+        #welcomeSection,
+        .infoSection {
+            background-color: #e7e5c8;
+            padding: 50px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .text-center {
+        background-color: #a78ba0;
+        padding: 50px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 1200px;
+      }
+
+        .infoSection h2,
+        .display-4 {
+            margin-bottom: 20px;
+            font-family: Verdana, sans-serif;
+        }
+
+        .display-4 {
+            margin-bottom: 20px;
+            font-family: Verdana, sans-serif;
+        }
+
+        .display-3 {
+            font-size: 25px;
+            font-family: Verdana, sans-serif;
+        }
+
+        .display-nav {
+            font-size: 20px;
+            font-family: Verdana, sans-serif;
+        }
+
+        .display-2 {
+            font-size: 15px;
+            font-family: Verdana, sans-serif;
+        }
+
+        ul.reviews {
+            text-align: left;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.reviews li {
+            margin-bottom: 15px;
+        }
+
+        .benefits-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .benefit-item {
+            background-color: #a78ba0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .three-column-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .three-column-wrapper .infoSection {
+            flex: 1 1 30%;
+            max-width: 32%;
+        }
+
+        @media (max-width: 768px) {
+            .three-column-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .three-column-wrapper .infoSection {
+                max-width: 100%;
+                flex: 1 1 auto;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .infoSection h2 {
+                font-size: 1.5rem;
+            }
+
+            .benefit-item {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand display-3" href="index.html">  Painting Gallery</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item display-nav">
+                    <a class="nav-link" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item display-nav">
+                    <a class="nav-link" href="painting_list.html">Галерея</a>
+                </li>
+                <li class="nav-item display-nav">
+                    <a class="nav-link" href="form.html">Обратная связь</a>
+                </li>
+                <li class="nav-item display-nav">
+                    <a class="nav-link" href="materials.html">Подача заявок</a>
+                </li>
+                <li class="nav-item display-nav">
+                    <a class="nav-link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="text-center" id="welcomeSection">
+        <h1 class="display-4 fade-in">Откройте для себя мир искусства</h1>
+    </div>
+
+    <div class="infoSection text-center">
+        <h2 class="fade-in" style="color: #000000">Добро пожаловать в Painting Gallery — место, где искусство оживает</h2>
+        <p class="display-3 fade-in">
+            Наша галерея предлагает широкий выбор картин разных стилей. Мы
+            сотрудничаем с талантливыми художниками, чтобы предложить вам только
+            оригинальные и качественные произведения искусства
+        </p>
+    </div>
+
+    <div class="container my-5">
+        <div id="gallerySlider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#gallerySlider" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#gallerySlider" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#gallerySlider" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="media/painting/Kramskoy_Portrait_of_a_Woman.jpg" class="d-block w-100" alt="Картина 1" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-3">
+                            Оригинальные картины от талантливых художников
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="media/painting/Woman_with_a_Parasol.jpg" class="d-block w-100" alt="Картина 2" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-3">
+                            Высокое качество исполнения и материалов
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="media/painting/Девушка_с_жемчужной_серёжкой.jpg" class="d-block w-100" alt="Картина 3" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-3">Прозрачные условия покупки</h5>
+                        <p class="display-3">
+                            Быстрая и надёжная доставка по всей стране
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#gallerySlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#gallerySlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="three-column-wrapper">
+        <div class="infoSection text-center">
+            <h2 class="fade-in" style="color: #000000">Найдите своё вдохновение</h2>
+            <p class="fade-in">
+                Просмотрите нашу коллекцию и найдите идеальное произведение для вашего
+                дома или офиса
+            </p>
+            <p class="fade-in">
+                <strong>Перейдите в раздел «Галерея» и начните своё путешествие в мир
+                    искусства!</strong>
+            </p>
+        </div>
+
+        <div class="infoSection">
+            <h2 class="fade-in" style="color: #000000">Отзывы наших клиентов</h2>
+            <ul class="reviews fade-in">
+                <li>
+                    <strong>Анна, Москва:</strong> «Картина превзошла все ожидания!
+                    Качество великолепное, теперь она украшает мою гостиную.»
+                </li>
+                <li>
+                    <strong>Игорь, Санкт-Петербург:</strong> «Очень доволен покупкой.
+                    Удобный сайт, понятные условия, быстрая доставка.»
+                </li>
+                <li>
+                    <strong>Марина, Казань:</strong> «Нашла здесь идеальный подарок на
+                    годовщину. Спасибо за помощь в подборе!»
+                </li>
+            </ul>
+        </div>
+
+        <div class="infoSection text-center">
+            <h2 class="fade-in" style="color: #000000">Свяжитесь с нами</h2>
+            <p class="fade-in">
+                Если у вас возникли вопросы, не стесняйтесь
+                обращаться через раздел <strong>«Обратная связь»</strong>
+            </p>
+            <p class="fade-in">Мы всегда рады помочь вам!</p>
+        </div>
+    </div>
+
+    <footer class="footer py-3">
+        <p>&copy; 2025 Painting Gallery. Kosolapova E. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
